@@ -1,0 +1,19 @@
+{
+    "name": "opencode",
+    "id": "opencode",
+    "version": "0.0.1",
+    "description": "Installs OpenCode, with autostart capabilities",
+    "documentationURL": "https://opencode.ai",
+	"options": {
+		"autostart": {
+			"default": false,
+			"type": "boolean"
+		}
+	},
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+	"postStartCommand": {
+		"opencode": "/opt/opencode-autostart"
+	}
+}

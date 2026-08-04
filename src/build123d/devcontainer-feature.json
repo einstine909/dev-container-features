@@ -1,0 +1,19 @@
+{
+    "name": "build123d",
+    "id": "color",
+    "version": "1.0.0",
+    "description": "Installs build123d and OS dependencies",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "build123d version"
+        }
+    },
+	"dependsOn": {
+		"ghcr.io/devcontainers/features/python:1": {}
+	},
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/python"
+    ]
+}
