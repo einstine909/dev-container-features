@@ -1,6 +1,6 @@
 {
     "name": "build123d",
-    "id": "color",
+    "id": "build123d",
     "version": "1.0.0",
     "description": "Installs build123d and OS dependencies",
     "options": {
