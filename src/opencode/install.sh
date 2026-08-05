@@ -11,5 +11,8 @@ if [[ "$AUTOSTART" == "true" ]]; then
 	fi
 fi
 
+chmod +x OPENCODE_AUTOSTARTER
+cat OPENCODE_AUTOSTARTER
+
 # Install opencode
 su - "$_REMOTE_USER" -c "curl -fsSL https://opencode.ai/install | bash"
