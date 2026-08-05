@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Make autostart script
-OPENCODE_AUTOSTARTER="/opt/opencode-autostart.sh"
+OPENCODE_AUTOSTARTER="/opt/opencode-autostart"
 echo "#!/bin/sh" > OPENCODE_AUTOSTARTER
 if [[ "$AUTOSTART" == "true" ]]; then
     echo -n "opencode " >> OPENCODE_AUTOSTARTER
