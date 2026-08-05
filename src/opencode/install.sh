@@ -3,7 +3,7 @@
 # Make autostart script
 OPENCODE_AUTOSTARTER="/opt/opencode-autostart"
 echo "#!/bin/sh" > OPENCODE_AUTOSTARTER
-if [[ "$AUTOSTART" == "true" ]]; then
+if [ "$AUTOSTART" == "true" ]; then
     echo -n "opencode " >> OPENCODE_AUTOSTARTER
 
 	if [ -n "$OPENCODE_ARGS" ]; then
