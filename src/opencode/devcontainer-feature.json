@@ -1,7 +1,7 @@
 {
     "name": "opencode",
     "id": "opencode",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Installs OpenCode, with autostart capabilities",
     "documentationURL": "https://opencode.ai",
 	"options": {
