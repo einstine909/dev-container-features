@@ -2,17 +2,18 @@
 
 # Make autostart script
 OPENCODE_AUTOSTARTER="/opt/opencode-autostart"
-echo "#!/bin/sh" > OPENCODE_AUTOSTARTER
+echo "#!/bin/sh" > "$OPENCODE_AUTOSTARTER"
 if [ "$AUTOSTART" = "true" ]; then
-    echo -n "opencode " >> OPENCODE_AUTOSTARTER
+    echo -n "opencode " >> "$OPENCODE_AUTOSTARTER"
 
 	if [ -n "$OPENCODE_ARGS" ]; then
-		echo "${OPENCODE_ARGS}" >> OPENCODE_AUTOSTARTER
+		echo -n "${OPENCODE_ARGS}" >> "$OPENCODE_AUTOSTARTER"
 	fi
+	echo "" >> "$OPENCODE_AUTOSTARTER"
+
 fi
 
-chmod +x OPENCODE_AUTOSTARTER
-cat OPENCODE_AUTOSTARTER
+chmod +x "$OPENCODE_AUTOSTARTER"
 
 # Install opencode
 su - "$_REMOTE_USER" -c "curl -fsSL https://opencode.ai/install | bash"
