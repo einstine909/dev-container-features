@@ -1,7 +1,7 @@
 {
     "name": "opencode",
     "id": "opencode",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "Installs OpenCode, with autostart capabilities",
     "documentationURL": "https://opencode.ai",
 	"options": {
@@ -18,6 +18,10 @@
 		"opencode": "/opt/opencode-autostart"
 	},
 	"mounts": [
-		"source=${localenv:XDG_CONFIG_HOME}/opencode,target=/home/vscode/.config/opencode,type=bind,ro,consistency=cached"
+		{
+			"source": "${localenv:XDG_CONFIG_HOME}/opencode",
+			"target": "/home/vscode/.config/opencode,readonly",
+			"type": "bind"
+		}
 	]
 }
