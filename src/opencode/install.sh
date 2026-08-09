@@ -10,7 +10,7 @@ if [ "$AUTOSTART" = "true" ]; then
 	if [ -n "$OPENCODE_ARGS" ]; then
 		echo -n "${OPENCODE_ARGS}" >> "$OPENCODE_INIT"
 	fi
-	echo " > /var/logs/opencode.log 2>&1 &" >> "$OPENCODE_INIT"
+	echo " > /var/log/opencode.log 2>&1 &" >> "$OPENCODE_INIT"
 
 fi
 
