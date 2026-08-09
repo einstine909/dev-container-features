@@ -1,7 +1,7 @@
 {
     "name": "opencode",
     "id": "opencode",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "description": "Installs OpenCode, with autostart capabilities",
     "documentationURL": "https://opencode.ai",
 	"options": {
@@ -15,12 +15,12 @@
         "ghcr.io/devcontainers/features/common-utils"
     ],
 	"postStartCommand": {
-		"opencode": "/opt/opencode-autostart"
+		"opencode": "/opt/opencode-init"
 	},
 	"mounts": [
 		{
-			"source": "${localenv:XDG_CONFIG_HOME}/opencode",
-			"target": "/mnt/config/opencode",
+			"source": "${localEnv:XDG_CONFIG_HOME}/opencode",
+			"target": "${containerEnv:XDG_CONFIG_HOME}/opencode",
 			"type": "bind"
 		}
 	]
