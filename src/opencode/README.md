@@ -15,7 +15,7 @@ Installs OpenCode, with autostart capabilities
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| autostart | - | boolean | false |
+| autostart | Starts OpenCode automatically | boolean | false |
 
 
 
