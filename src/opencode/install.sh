@@ -4,7 +4,7 @@
 OPENCODE_INIT="/opt/opencode-init"
 echo "#!/bin/sh" > "$OPENCODE_INIT"
 
-echo "mount --bind -o ro /mnt/config/opencode /home/$_REMOTE_USER/.config/opencode"
+echo "mount --bind -o ro /mnt/config/opencode /home/$_REMOTE_USER/.config/opencode" >> "$OPENCODE_INIT"
 
 if [ "$AUTOSTART" = "true" ]; then
     echo -n "nohup opencode " >> "$OPENCODE_INIT"
