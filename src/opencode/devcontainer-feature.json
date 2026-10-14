@@ -19,9 +19,9 @@
 	},
 	"mounts": [
 		{
-			"source": "${localEnv:$XDG_DATA_HOME}/devcontainers/${devcontainerId}/opencode/",
+			"source": "${localEnv:XDG_DATA_HOME}/opencode",
 			"target": "/home/${remoteUser}/.local/share/opencode",
-			"type": "bind"
+			"type": "volume"
 		}
 	]
 }
