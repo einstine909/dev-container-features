@@ -1,7 +1,7 @@
 {
     "name": "opencode",
     "id": "opencode",
-    "version": "0.0.20",
+    "version": "0.0.21",
     "description": "Installs OpenCode, with autostart capabilities",
     "documentationURL": "https://opencode.ai",
 	"options": {
@@ -15,12 +15,12 @@
         "ghcr.io/devcontainers/features/common-utils"
     ],
 	"postStartCommand": {
-		"opencode": "nohup bash -c '/opt/opencode-init &'"
+		"opencode": "nohup bash -c '/opt/opencode-init > /var/log/opencode.log 2>&1 &'"
 	},
 	"mounts": [
 		{
-			"source": "${localEnv:XDG_CONFIG_HOME}/opencode",
-			"target": "/home/vscode/.config/opencode",
+			"source": "${localEnv:$XDG_DATA_HOME}/devcontainers/${devcontainerId}/opencode/",
+			"target": "/home/${remoteUser}/.local/share/opencode",
 			"type": "bind"
 		}
 	]
