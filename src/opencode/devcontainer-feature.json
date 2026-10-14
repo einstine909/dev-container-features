@@ -1,7 +1,7 @@
 {
     "name": "opencode",
     "id": "opencode",
-    "version": "0.0.17",
+    "version": "0.0.20",
     "description": "Installs OpenCode, with autostart capabilities",
     "documentationURL": "https://opencode.ai",
 	"options": {
@@ -15,7 +15,7 @@
         "ghcr.io/devcontainers/features/common-utils"
     ],
 	"postStartCommand": {
-		"opencode": "/opt/opencode-init"
+		"opencode": "nohup bash -c '/opt/opencode-init &'"
 	},
 	"mounts": [
 		{
