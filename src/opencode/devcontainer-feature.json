@@ -1,7 +1,7 @@
 {
     "name": "opencode",
     "id": "opencode",
-    "version": "0.0.22",
+    "version": "0.0.23",
     "description": "Installs OpenCode, with autostart capabilities",
     "documentationURL": "https://opencode.ai",
 	"options": {
@@ -19,7 +19,7 @@
 	},
 	"mounts": [
 		{
-			"source": "${localEnv:XDG_DATA_HOME}/opencode",
+			"source": "${localEnv:XDG_DATA_HOME}-opencode",
 			"target": "/home/${remoteUser}/.local/share/opencode",
 			"type": "volume"
 		}
