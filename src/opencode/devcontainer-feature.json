@@ -8,15 +8,5 @@
 	},
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
-    ],
-	"postStartCommand": {
-		"opencode": "nohup bash -c '/opt/opencode-init > /var/log/opencode.log 2>&1 &'"
-	},
-	"mounts": [
-		{
-			"source": "${devcontainerId}-opencode",
-			"target": "/home/${remoteUser}/.local/share/opencode",
-			"type": "volume"
-		}
-	]
+    ]
 }
