@@ -5,11 +5,6 @@
     "description": "Installs OpenCode, with autostart capabilities",
     "documentationURL": "https://opencode.ai",
 	"options": {
-		"autostart": {
-			"description": "Starts OpenCode automatically",
-			"default": false,
-			"type": "boolean"
-		}
 	},
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
